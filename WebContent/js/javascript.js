@@ -21,6 +21,7 @@ function doCompletion() {
 }
 
 function initRequest() {
+	/*ブラウザー毎にXMLHttp実行選定 */
     if (window.XMLHttpRequest) {
         if (navigator.userAgent.indexOf('MSIE') != -1) {
             isIE = true;
@@ -33,6 +34,7 @@ function initRequest() {
 }
 
 function callback() {
+	/* 応答への対応 */
     clearTable();
 
     if (req.readyState == 4) {
